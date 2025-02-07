@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 public class AnaSayfa implements ActionListener {
 
     JButton button = new JButton("profile göster");
+    JFrame frame = new JFrame();
 
         public AnaSayfa(){
             button.addActionListener(this);
@@ -18,11 +19,18 @@ public class AnaSayfa implements ActionListener {
             frame.setSize(400, 300);
             frame.setLayout(null);
             frame.setVisible(true);
+            frame.add(button);
 
         }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+            if(e.getSource() == button){
+                frame.dispose();
+                profilsayfa profilsayfa = new profilsayfa();
+
+            }
+
 
     }
 }
